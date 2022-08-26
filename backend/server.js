@@ -1,14 +1,7 @@
 // Connect mongoose to mongodb
 
-const mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://vlad:vladvladvlad@cluster0.k06bdwd.mongodb.net/?retryWrites=true&w=majority");
-
-// Using user files
-
-const User = require("./app");
-
-new User({name: "hekey", age: 31})
-user.save().then(()=> console.log("user saved"))
+const mongoose = require('mongoose')
+mongoose.connect("mongodb+srv://vlad:vladvladvlad@cluster0.k06bdwd.mongodb.net/?retryWrites=true&w=majority")
 
 // Connect the server
 
