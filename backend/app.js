@@ -11,32 +11,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.post('/api/stuff', (req, res, next) => {
-  console.log(req.body);
-  res.status(201).json({
-    message: "Saved successfully"
-  })
-});
-
-app.get('/api/stuff', (req, res, next) => {
-  const stuff = [
-    {
-        _id: 'string',
-        name: 'string',
-        manufacturer: 'string',
-        description: 'string',
-        heat: 5,
-        likes: 5,
-        dislikes: 5,
-        imageUrl: 'string',
-        mainPepper: 'string',
-        usersLiked: 'string[]',
-        usersDisliked: 'string[]',
-        userId: 'string',
-    },
-  ];
-  res.status(200).json(stuff);
-});
+const userRouter = require('./routes/user')
+app.use('/api/auth',userRouter)
 
 // Create User model
 

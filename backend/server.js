@@ -8,7 +8,7 @@ mongoose.connect("mongodb+srv://vlad:vladvladvlad@cluster0.k06bdwd.mongodb.net/?
 
 const http = require('http');
 const app = require('./app');
-const user = require('./user');
+//const user = require('./user');
 
 const normalizePort = val => {
   const port = parseInt(val, 10);
