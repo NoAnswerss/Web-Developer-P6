@@ -1,14 +1,5 @@
-// Connect mongoose to mongodb
-
-const mongoose = require('mongoose')
-mongoose.connect("mongodb+srv://vlad:vladvladvlad@cluster0.k06bdwd.mongodb.net/?retryWrites=true&w=majority")
-
-// Connect the server
-
-
 const http = require('http');
 const app = require('./app');
-//const user = require('./user');
 
 const normalizePort = val => {
   const port = parseInt(val, 10);
