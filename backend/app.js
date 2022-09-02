@@ -27,10 +27,13 @@ app.use('/api/sauces', sauceRoutes);
 app.use('/api/auth', userRoutes);
 
 
+
+
+
 mongoose.connect(process.env.MONGODB,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB!'))
-  .catch(() => console.log('Faile to connect to MongoDB !'));
-
-module.exports = app;
+    .then(() => console.log('Connected to MongoDB!'))
+    .catch(() => console.log('Failed to connect to MongoDB !'));
+    
+    module.exports = app;
