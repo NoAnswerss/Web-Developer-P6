@@ -1,5 +1,4 @@
-// Setting up the user schema
-
+// Setting up the user schema using mongoose
 
 const mongoose = require("mongoose");
 

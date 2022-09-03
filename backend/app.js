@@ -1,14 +1,16 @@
+// Using the express app
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
-const sauceRoutes = require('./routes/sauces');
 const path = require('path');
 const dotenv = require("dotenv");
 
-const userRoutes = require('./routes/user')
+// Getting the routes 
 
-// const saucesRoutes = require('./routes/sauces')
+const sauceRoutes = require('./routes/sauces');
+const userRoutes = require('./routes/user')
 
 dotenv.config();
 
@@ -25,10 +27,6 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.use('/api/sauces', sauceRoutes);
 app.use('/api/auth', userRoutes);
-
-
-
-
 
 mongoose.connect(process.env.MONGODB,
   { useNewUrlParser: true,
